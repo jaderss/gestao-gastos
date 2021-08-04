@@ -1,1 +1,2 @@
+create table cartao (numero bigint not null, cpf_titular varchar(255), cvc integer, data_validade date, nome_titular varchar(255), primary key (numero));
 insert into cartao (numero, data_validade, nome_titular, cpf_titular, cvc) values (4582658945782145,  parsedatetime('2029-07-31', 'yyyy-MM-dd'), 'Jader', '02154488741', 444);
