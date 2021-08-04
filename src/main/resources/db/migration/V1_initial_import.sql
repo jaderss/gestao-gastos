@@ -1,0 +1,1 @@
+insert into cartao (numero, data_validade, nome_titular, cpf_titular, cvc) values (4111111111111111,  parsedatetime('2029-07-31', 'yyyy-MM-dd'), 'Carla', '12345678909', 123);
