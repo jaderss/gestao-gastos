@@ -1,0 +1,22 @@
+spring:
+  redis:
+    port: 6379
+    host: localhost
+  flyway:
+    enabled: true
+    url: jdbc:h2:./data/api
+    user: sa
+    password:
+    locations: classpath:db/migration
+    schemas: cartoes-db
+    baseline-on-migrate: true
+    table: FLYWAY_SCHEMA_HISTORY
+    clean-on-validation-error: true
+  datasource:
+    url: jdbc:h2:mem:cartoes-db
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+logging:
+  level:
+    root: debug
