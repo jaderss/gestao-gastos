@@ -18,7 +18,7 @@ public class CartaoController {
     private final CartaoRepository repository;
 
     @GetMapping
-    public List<Cartao> getCartaoPorCPF(@RequestParam String cpf) {
+    public List<Cartao> pesquisarCartoesPorCPF(@RequestParam String cpf) {
         return repository.findByCpfTitular(cpf);
     }
 }
