@@ -1,7 +1,7 @@
 package br.com.wipro.challenge.gestaogastos.controller;
 
 import br.com.wipro.challenge.gestaogastos.domain.Cartao;
-import br.com.wipro.challenge.gestaogastos.repository.CartaoRepository;
+import br.com.wipro.challenge.gestaogastos.service.CartaoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,10 +15,10 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CartaoController {
 
-    private final CartaoRepository repository;
+    private final CartaoService service;
 
     @GetMapping
     public List<Cartao> pesquisarCartoesPorCPF(@RequestParam String cpf) {
-        return repository.findByCpfTitular(cpf);
+        return service.pesquisarPorCpf(cpf);
     }
 }
