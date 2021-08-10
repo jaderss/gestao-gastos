@@ -1,7 +1,4 @@
 spring:
-  redis:
-    port: 6379
-    host: localhost
   flyway:
     enabled: true
     url: jdbc:h2:mem:cartoes-db
@@ -20,6 +17,9 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: none
+  data:
+    mongodb:
+      host: localhost
 logging:
   level:
     root: info
