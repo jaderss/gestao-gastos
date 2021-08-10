@@ -1,6 +1,5 @@
 package br.com.wipro.challenge.gestaogastos.domain;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.mongodb.core.mapping.Document;
