@@ -25,10 +25,16 @@ public class Transacao {
     @Setter
     private Long codigoUsuario;
 
+    private String categoria;
+
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private LocalDateTime data;
 
     public Transacao() {
         this.data = LocalDateTime.now();
+    }
+
+    public void categorizar(String categoria) {
+        this.categoria = categoria;
     }
 }

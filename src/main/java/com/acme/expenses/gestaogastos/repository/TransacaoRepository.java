@@ -9,9 +9,12 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Repository
-public interface TransacaoRepository extends MongoRepository<Transacao, Long> {
+public interface TransacaoRepository extends MongoRepository<Transacao, String> {
 
     List<Transacao> findByCodigoUsuarioAndDataAfter(Long codigoUsuario, LocalDateTime dataInicial);
 
     List<Transacao> findByCodigoUsuarioAndDataBetween(Long codigoUsuario, LocalDateTime dataInicial, LocalDateTime dataFinal);
+
+    List<Transacao> findByCategoriaStartingWith(String filtro);
+
 }
