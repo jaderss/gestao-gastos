@@ -1,6 +1,6 @@
 # gestao-gastos
 
-[![CI](https://github.com/jaderss/gestao-gastos/actions/workflows/ci.yml/badge.svg)](https://github.com/jaderss/gestao-gastos/actions/workflows/ci.yml)
+[![CI](https://github.com/jaderss/gestao-gastos/actions/workflows/ci.yml/badge.svg)](https://github.com/jaderss/gestao-gastos/actions/workflows/ci.yml) [![Quality gate](https://sonarcloud.io/api/project_badges/measure?project=jaderss_gestao-gastos&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=jaderss_gestao-gastos)
 
 An expense tracking service built on Spring Boot 4.1 and Java 25. It looks up a holder's cards by CPF and records, categorizes and searches their card transactions. Cards live in a relational database through JPA and Flyway, and transactions in MongoDB.
 
