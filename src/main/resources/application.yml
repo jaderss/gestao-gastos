@@ -1,25 +1,6 @@
 spring:
-  flyway:
-    enabled: true
-    url: jdbc:h2:mem:cartoes-db
-    user: sa
-    password: password
-    locations: classpath:db/migration
-    baseline-on-migrate: true
-    table: FLYWAY_SCHEMA_HISTORY
-    clean-on-validation-error: true
   datasource:
     url: jdbc:h2:mem:cartoes-db
-    driverClassName: org.h2.Driver
-    username: sa
-    password: password
   jpa:
-    show-sql: true
     hibernate:
       ddl-auto: none
-  data:
-    mongodb:
-      host: localhost
-logging:
-  level:
-    root: info
