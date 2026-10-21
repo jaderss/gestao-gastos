@@ -29,7 +29,7 @@ There is no authentication, so the service belongs behind a gateway that authent
 - Amounts are `BigDecimal` with an ISO 4217 currency, stored in MongoDB as Decimal128 rather than as strings or doubles. An amount with more decimals than its currency allows is rejected.
 - The record time comes from an injected `Clock`, so the tests pin it.
 - A day is the half-open range from midnight to the next midnight in `expenses.time-zone`, `America/Sao_Paulo` by default.
-- The last N days means from exactly N times 24 hours ago up to now, for N from 1 to 366.
+- The last N days means from exactly N times 24 hours ago up to now, for N from 1 to 366. Lists are not paged, which suits a single user's history but not a bulk export.
 
 ## Run it
 
@@ -64,7 +64,7 @@ curl -s 'localhost:8080/transactions/categories?userId=1&prefix=fo'
 | Endpoint | Input | Rules |
 |---|---|---|
 | `POST /cards/search` | `cpf` | valid CPF, with or without punctuation |
-| `POST /transactions` | `userId`, `description`, `amount`, `currency` | positive user id, description up to 200 characters, positive amount in the currency's scale |
+| `POST /transactions` | `userId`, `description`, `amount`, `currency` | positive user id, description up to 200 characters, positive amount of up to 15 integer digits in the currency's scale |
 | `GET /transactions/{id}` | | 404 if unknown |
 | `PUT /transactions/{id}/category` | `category` | not blank, up to 50 characters; 404 if unknown |
 | `GET /transactions` | `userId`, `date` | ISO date such as `2026-10-21` |

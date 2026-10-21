@@ -5,6 +5,8 @@ spring:
     hibernate:
       ddl-auto: validate
     open-in-view: false
+  mongodb:
+    database: expenses
   data:
     mongodb:
       auto-index-creation: true

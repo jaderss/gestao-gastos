@@ -59,6 +59,7 @@ class TransactionControllerTest {
                     {"userId": 1, "description": "Coffee", "amount": 0, "currency": "BRL"}   | amount                | must be greater than 0
                     {"userId": 1, "description": "Coffee", "amount": 8.905, "currency": "BRL"} | amountInCurrencyScale | amount must not have more decimal places than the currency allows
                     {"userId": 1, "description": "Coffee", "amount": 8.90}                   | currency              | must not be null
+                    {"userId": 1, "description": "Coffee", "amount": 12345678901234567890123456789012345, "currency": "BRL"} | amount | numeric value out of bounds (<15 digits>.<4 digits> expected)
                     """)
     void rejectsInvalidTransactions(String body, String field, String message) {
         assertThat(mvc.post()
