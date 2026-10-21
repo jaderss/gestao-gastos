@@ -8,11 +8,11 @@
         <version>4.1.1</version>
         <relativePath/>
     </parent>
-    <groupId>com.acme.expenses</groupId>
-    <artifactId>gestao-gastos</artifactId>
+    <groupId>dev.jaderss</groupId>
+    <artifactId>expenses</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>gestao-gastos</name>
-    <description>gestao-gastos</description>
+    <name>expenses</name>
+    <description>Card holder lookup and expense tracking</description>
 
     <properties>
         <java.version>25</java.version>

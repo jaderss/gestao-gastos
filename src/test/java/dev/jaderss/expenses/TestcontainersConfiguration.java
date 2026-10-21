@@ -1,4 +1,4 @@
-package com.acme.expenses.gestaogastos;
+package dev.jaderss.expenses;
 
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;

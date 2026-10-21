@@ -1,6 +1,10 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:cartoes-db
+    url: jdbc:h2:mem:cards
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: validate
+    open-in-view: false
+  web:
+    locale: en
+    locale-resolver: fixed
