@@ -77,8 +77,8 @@ curl -s 'localhost:8080/transactions/categories?userId=1&prefix=fo'
 ./mvnw verify
 ```
 
-Docker must be running. The build runs the tests and checks formatting with Spotless and Palantir Java Format. Repository and service tests run against H2 with the Flyway migration and against MongoDB 8.0 in Testcontainers, so the queries, the day boundaries and the Decimal128 mapping are checked against the real databases. Controller tests cover every validation rule and error response.
+Docker must be running. The build runs the tests and checks formatting with Spotless and Palantir Java Format. Repository and service tests run against H2 with the Flyway migration and against MongoDB 7.0 in Testcontainers, so the queries, the day boundaries and the Decimal128 mapping are checked against the real databases. MongoDB stays on 7.0 because every 8.x and 9.0 release refuses to start on Linux kernels 6.19 to 7.0.13, which includes the Ubuntu 26.04 GitHub runners (SERVER-121912). Controller tests cover every validation rule and error response.
 
 ## Stack
 
-Java 25, Spring Boot 4.1, Spring Data JPA, Spring Data MongoDB, Flyway, H2, MongoDB 8.0, Bean Validation, Testcontainers, JUnit 6, AssertJ.
+Java 25, Spring Boot 4.1, Spring Data JPA, Spring Data MongoDB, Flyway, H2, MongoDB 7.0, Bean Validation, Testcontainers, JUnit 6, AssertJ.
